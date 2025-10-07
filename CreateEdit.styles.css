@@ -1,0 +1,57 @@
+body {
+    font-family: Merriweather, serif;
+    font-size: 1rem;
+    margin: 10px 0 0 0;
+    line-height:1.8;
+}
+
+h1, p,label, input, textarea, button { text-align: justify; margin-left: 20px;}
+
+footer {
+    background: #173451;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+}
+    
+@media screen and (min-width: 768px) {s
+
+    p, label, input, textarea {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+    
+    h1 { font-size: 2rem;}
+
+    .footer-div {
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        gap: 35px;
+        align-items: center;
+        justify-content: center;
+    }
+    footer {
+        padding: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    form {
+        margin-left: 70px;
+    }
+    h1 { font-size: 2.3rem;
+        padding: 1rem 3rem 0 0rem;
+        margin-bottom: 15px;
+    }
+    p {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    a {
+        gap: 20px;
+        font-size: large;
+    }
+
+}
+

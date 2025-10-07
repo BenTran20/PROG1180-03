@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<script src="create.js"></script>
+    <head>
+        <link rel="stylesheet" href="CreateEdit.styles.css">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create</title>
+    </head>
+    <body>
+        <form>
+            <h1>Create NCR</h1>
+            <p>please fill in the required fields to continue to the next page</p>
+            
+            <div className="form-container">
+                <div className="form-group">
+                    <label>
+                        Enter Product ID: <br/>
+                        <input type="text" placeholder="eg. N12345678" minLength={9} maxLength={9} /> 
+                    </label>
+                </div>
+                <br/>
+
+                <div className="form-group">
+                    <label>
+                        Enter Order ID: <br/>
+                        <input type="text" placeholder="eg. 123456789" minLength={9} maxLength={9}/>
+                    </label>
+                </div>
+
+                <br/>
+                <label>
+                        Enter Process:
+                </label>    
+                <div className="form-group">
+                    
+                    <textarea placeholder="Enter Process" minLength={0} maxLength={1000} 
+                    rows="10" cols="60"></textarea>  
+                </div>
+
+                <br/>
+                <div className="form-group">
+                    <label>
+                        Enter Supplier Name: <br/>
+                        <input type="text" placeholder="Enter name" minLength={3} maxLength={50}/>
+                    </label>
+                </div>
+
+                <br/>
+                <label>
+                    Description of Item: 
+                </label>
+                <div className="form-group">
+                        <textarea placeholder="Enter Description" minLength={0} maxLength={100} 
+                        rows="6" cols="60"></textarea>
+                    </label>
+                    
+                </div>
+
+                <br/>
+                <label>
+                        Description of Defect:
+                </label>
+                <div className="form-group">
+                        <textarea placeholder="Enter Description" minLength={0} maxLength={200} 
+                        rows="8" cols="60"></textarea> 
+                </div>
+
+                <br/>
+                <div className="form-group">
+                    <label>
+                        Enter Quantity Received: <br/>
+                        <input type="number" placeholder="Enter number" minLength={0} maxlength={9}/>
+                    </label>
+                </div>
+
+                <br/>
+                <div className="form-group">
+                    <label>
+                        Enter Quantity Defect: <br/>
+                        <input type="number" placeholder="Enter number"   minLength={0} maxLength={9}/> 
+                    </label>
+                    <br/>
+                </div>
+
+                <br/>
+                <div className="form-group">
+                    <label>
+                        Item marked Non-conforming? <br/>
+                        <label>yes</label>
+                        <input type="checkbox" value="yes"/> 
+                        
+                        <br/>
+                        <label>no</label>
+                        <input type="checkbox" value="no"/> <br/>
+
+                    </label>
+                    
+                </div>
+               
+                <br/>
+                <div className="form-group">
+                    <label>
+                        Enter role:
+                        <input type="text" placeholder="Enter role"  minLength={6} maxLength={30} /> 
+                    </label>                    
+                    <br/>
+                    
+                </div>
+                
+                <br/>
+                <button type="submit" onsubmit="">
+                    <a href="details.html">Save</a>
+                </button>
+                <a href="view.html">cancel</a>
+            </div>
+            <br/>
+        </form>
+    </body>
+
+    
+    <footer>
+        <div class="footer-div">
+            <div class="footer-col">
+                <p>Copyright &copy; Crossfire NCR Form | Rice Programmers</p>
+            </div>
+            <div class="footer-col">
+                <p>Mail: riceprogrammers@gmail.com</p>
+                <p>Phone: +1 &#40;905&#41; 456-7890</p>
+            </div>
+        </div>
+    </footer>
+</html>
+
