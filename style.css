@@ -47,6 +47,12 @@ p, li, i { text-align: justify;}
 .hamburger {
     justify-self:end;
     font-size: 2.8rem;
+    transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .btn-center, .center-section p{
