@@ -1,0 +1,111 @@
+body {
+    font-family: Merriweather, serif;
+    font-size: 1rem;
+    margin: 10px 0 0 0;
+    line-height:1.8;
+}
+
+main { padding: 15px;}
+
+p, li, i { text-align: justify;}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin: 0 10px;
+}
+
+.navbar-logo img{
+    height: 80px; 
+}
+
+.nav-links {    
+    display: none; 
+    grid-template-columns: 1fr; 
+    position: relative;
+    width: 100%; 
+}
+
+.nav-links ul {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    list-style: none; 
+    margin: 00; 
+    padding: 00; 
+}
+
+.nav-links li {
+    border-bottom: 1.5px solid;
+}
+
+.nav-links a {
+    display: block; 
+    text-decoration: none; 
+    padding: 1rem;
+}
+
+.hamburger {
+    justify-self:end;
+    font-size: 2.8rem;
+}
+
+.btn-center, .center-section p{
+    text-align: center;
+}
+
+.center-section {margin: 20px;}
+
+.btn-start {
+    width: 350px;              
+    padding: 20px;            
+    font-size: 20px;            
+    font-weight: 700;
+    background-color: #173451;  
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-start:hover {
+    background-color: #5897c9;
+    transform: scale(1.05);   
+}
+
+footer {
+    background: #173451;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+}
+
+@media screen and (min-width: 768px) {s
+    main {
+        font-size: 1.2rem;
+        padding: 0 30px 15px 30px;
+    }
+
+    p, li, i {font-size: 1.2rem;}
+    h1 { font-size: 2rem;}
+
+    .footer-div {
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        gap: 35px;
+        align-items: center;
+        justify-content: center;
+    }
+    footer {
+        padding: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        font-size: 1.3rem;
+        padding: 1rem 5rem 0 5rem;
+        margin-bottom: 15px;
+    }
+    h1 { font-size: 2.3rem;}
+}
