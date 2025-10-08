@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCR Details</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="details-style.css" />
+    <script src="menu.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="homepage.html" class="navbar-logo"><img src="images/Crossfire Logo - no bkgd.png"
+                alt="Crossfire Logos" /></a>
+
+
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="nav-links">
+        <ul>
+            <li><a href="homepage.html">Homepage</a></li>
+            <li><a href="create.html">Create</a></li>
+            <li><a href="list.html">List</a></li>
+        </ul>
+    </div>
+    <main>
+
+
+        <div class="card" role="region" aria-label="September NCR Report">
+            <form class="grid" onsubmit="return false;" aria-hidden="false">
+                <div class="full" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+                    <div>
+                        <label>Report Title</label>
+                        <div class="readonly-value">September NCR Report</div>
+                    </div>
+                    <div style="min-width:220px">
+                        <label>Report Date</label>
+                        <div class="readonly-value">2025-10-6</div>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Product ID</label>
+                    <div class="readonly-value">N12345678</div>
+                </div>
+
+
+                <div>
+                    <label>Order ID</label>
+                    <div class="readonly-value">123456789</div>
+                </div>
+
+                <fieldset class="full card" style="padding:12px">
+                    <legend style="font-weight:700;color:#0f172a;padding:0 6px">Progression</legend>
+                    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px">
+
+                        <div class="full" style="grid-column:1/-1">
+                            <div class="readonly-value">During final inspection a batch of parts showed dimensional
+                                variance outside tolerance. This affected 12 pieces from batch #B723.</div>
+                        </div>
+
+                </fieldset>
+
+                <div>
+                    <label>Supplier Name</label>
+                    <div class="readonly-value">Donald Trump</div>
+                </div>
+
+                <fieldset class="full card" style="padding:12px">
+                    <legend style="font-weight:700;color:#0f172a;padding:0 6px">Descriptions</legend>
+                    <div class="full">
+                        <label>Description of Item</label>
+                        <div class="readonly-value">Everything of item is well checked #ISO9001 (CERTIFIED)</div>
+                    </div>
+
+                    <div class="full">
+                        <label>Description of Defect</label>
+                        <div class="readonly-value">Some of products are broken(Requesting refund)</div>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <label>Quantity Received</label>
+                    <div class="readonly-value">60</div>
+                </div>
+
+                <div style="min-width:220px">
+                    <label>Quantity Defect</label>
+                    <div class="readonly-value">1</div>
+                </div>
+
+                <div>
+                    <label>Item marked Non-conforming?</label>
+                    <div class="readonly-value">Yes</div>
+                </div>
+
+
+                <div>
+                    <label>Role</label>
+                    <div class="readonly-value">Administration</div>
+                </div>
+
+                <div>
+                    <button type="button" class="btn back" onclick="location.href='list.html'">Back</button>
+                    <button type="button" class="btn" onclick="window.print()">Print</button>
+                </div>
+
+    </main>
+</body>
+<footer>
+    <div class="footer-div">
+        <div class="footer-col">
+            <p>Copyright &copy; Crossfire NCR Form | Rice Programmers</p>
+        </div>
+        <div class="footer-col">
+            <p>Mail: riceprogrammers@gmail.com</p>
+            <p>Phone: +1 &#40;905&#41; 456-7890</p>
+        </div>
+    </div>
+</footer>
+
+</html>
