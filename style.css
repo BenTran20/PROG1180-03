@@ -1,66 +1,59 @@
 body {
     font-family: Merriweather, serif;
-    font-size: 1rem;
-    margin: 10px 0 0 0;
+    margin: 0px;
     line-height:1.8;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-size: 1.3rem;
 }
 
-main { 
-    padding: 15px;
-    flex-grow: 1;
+main {
+    margin-bottom: 15px;
 }
 
-p, li, i { text-align: justify;}
+#wrapper { padding: 15px 100px;}
 
+p, li, i, label { 
+    text-align: justify;
+}
+
+.required-asterisk {
+	color: red; 
+	font-weight: bold; 
+}
+
+/*NAVBAR*/
 .navbar {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    margin: 0 10px;
+    grid-template-columns: 0.4fr 2.5fr 1fr;
+    align-items:center;
+    padding: 0px 20px;
+    background-color: #173451;
 }
 
 .navbar-logo img{
-    height: 80px; 
+    height: 80px;
 }
 
-.nav-links {    
-    display: none; 
-    grid-template-columns: 1fr; 
-    position: relative;
-    width: 100%; 
+.navbar span {
+    font-weight: 500;    
+    align-items:center;
+    font-size: 1.6rem;
+    color:  white;
 }
 
-.nav-links ul {
-    display: grid; 
-    grid-template-columns: 1fr; 
-    list-style: none; 
-    margin: 00; 
-    padding: 00; 
-}
-
-.nav-links li {
-    border-bottom: 1.5px solid;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-    display: block; 
-    text-decoration: none; 
-    padding: 1rem;
+    color: white;
+    text-decoration: none;
 }
 
-.hamburger {
-    justify-self:end;
-    font-size: 2.8rem;
-    transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.hamburger:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
-
+/*Create-Btn (Homepage)*/
 .btn-center, .center-section p{
     text-align: center;
 }
@@ -70,7 +63,7 @@ p, li, i { text-align: justify;}
 .btn-start {
     width: 350px;              
     padding: 20px;            
-    font-size: 20px;            
+    font-size: 1.3rem;            
     font-weight: 700;
     background-color: #173451;  
     color: white;
@@ -84,22 +77,240 @@ p, li, i { text-align: justify;}
     transform: scale(1.05);   
 }
 
+/*LIST*/
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-header span {
+    color: #173451;
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+
+.list-header .create-btn {
+    padding: 6px 15px;
+    font-size: 1.1rem;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.list-id {
+    flex: 1.1;
+    font-weight: 600;
+}
+
+.list-name  {
+    flex: 1.6;
+}
+
+.list-time {
+    flex: 1.1;
+}
+
+.list-status {
+    flex: 1;
+    text-align: center;
+}
+
+.list-actions {
+    flex: 1.6;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.headers {
+    font-weight: 700;
+}
+.action-btn {
+    background-color: #173451;  
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.details-btn{padding: 7px 10px;}
+.edit-btn {padding: 7px 18px;}
+.delete-btn {padding: 7px 13px;}
+
+.action-btn:hover {
+    background-color: #5897c9; 
+}
+
+/*FORM*/
+.header {
+    padding: 0px 100px;       
+    margin-bottom: 20px;
+}
+.header h1{
+    text-align:center;
+}
+.header p {
+    font-style: italic;
+    margin-left: 0px;
+}
+
+.form-container {
+    max-width: 1000px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.header-info   {
+    color: #173451; 
+    text-align: right;}
+
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #5897c9;   
+    display: grid;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin: 10px;
+}
+
+legend {
+    color: #173451;  
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+.three-cols {
+    display: grid;
+    grid-template-columns: 2.2fr 1.7fr 2.5fr; 
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea
+{
+    padding: 10px 20px;
+    margin: 9px 10px;
+    border: 1px solid grey;      
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group-2 {
+    display: grid;
+    grid-template-columns: 0.3fr auto 1fr; 
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.form-group-2 label {
+    display: contents; 
+}
+
+.form-group-2 #supplier {width: 30%;}
+.form-group-2 #desItem, .form-group-2 textarea{ width: 85%;}
+#quaDefect, #quaReceived {width: 15%; margin-left: 30px;}
+
+.save-btn, .cancel-btn, .back-btn, .print-btn {
+    background-color: #173451;  
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;       
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight:bold;
+    font-size: 0.9rem;
+}
+
+.save-btn:hover, .cancel-btn:hover, .back-btn:hover, .print-btn:hover {
+    background-color: #5897c9; 
+}
+
+.form-btn {
+    display: flex;               
+    margin-top: 25px;
+    justify-content: center;     
+    gap: 20px;                       
+}
+
+/*DETAILS*/
+.ncr-container {
+    padding: 15px ;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.table-ncr {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.table-ncr .header-row {
+    background: #5897c9;  
+    text-align: center;
+}
+
+.table-ncr th {
+    width: 30%;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.table-ncr td {
+    border: 1px solid black;
+    padding: 2px 30px;
+}
+
+.table-ncr.single th{    background: #5897c9;  }
+
+.table-ncr.single td {
+    height: 80px;
+    vertical-align: top;
+    padding: 0px 40px;
+}
+
+/*footer*/
 footer {
     background: #173451;
     color: white;
     display: block;
     padding: 10px 20px;
+    margin: 0;
 }
 
 @media screen and (min-width: 768px) {s
-    main {
-        font-size: 1.2rem;
-        padding: 0 30px 15px 30px;
-    }
+    main {  padding: 0 30px 15px 30px;}
 
-    p, li, i {font-size: 1.2rem;}
     h1 { font-size: 2rem;}
-
+    
     .footer-div {
         display: grid;
         grid-template-columns: 3fr 3fr;
@@ -110,14 +321,65 @@ footer {
     footer {
         padding: 10px;
     }
-    
+   
 }
 
-@media screen and (min-width: 1024px) {
-    main {
-        font-size: 1.3rem;
-        padding: 1rem 5rem 0 5rem;
-        margin-bottom: 15px;
-    }
-    h1 { font-size: 2.3rem;}
+/*POP UP*/
+.popup-email {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    padding: 25px 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 330px;
+    background: #fff;
+    border: 3px solid #173451;
+}
+
+.popup-content input[type="email"] {
+    width: 80%;
+    padding: 9px;
+    margin: 10px 0 20px 0;
+    border-radius: 5px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popup-send, .popup-cancel{
+    background-color: #173451;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 20px;       
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.popup-send:hover, .popup-cancel:hover {
+  background-color: #5897c9;
+}
+
+/*Filter & Sort*/
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter label {
+  font-weight: 500;
 }

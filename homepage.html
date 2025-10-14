@@ -9,24 +9,20 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="homepage.html" class="navbar-logo"><img src="images/Crossfire Logo - no bkgd.png" alt="Crossfire Logos"/></a>
+        <a href="homepage.html" class="navbar-logo">
+            <img src="images/Crossfire Logo.png" alt="Crossfire Logos"/>
+        </a>
 
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
-        </div>
-    </nav>
+        <span>CROSSFIRE NCR</span>
 
-    <div class="nav-links">
-        <ul>
+        <ul class="nav-links">
             <li><a href="homepage.html">Homepage</a></li>
             <li><a href="create.html">Create</a></li>
-            <li><a href="list.html">List</a></li>
         </ul>
-    </div>
+    </nav>
 
     <main id="wrapper">
         <section>
-            <h1>Welcome to Crossfire NCR</h1>
             <p>This website allows you to create, view, store, and manage Non-Conformance Reports (NCRs) efficiently. It helps to save time and effort for inspectors, especially when attaching images or video links for demonstration. The website can also generate a PDF file for suppliers.</p>
         </section>
 
@@ -37,19 +33,51 @@
             </div>
         </section>
 
+        <section>
+            <div class="list-header">
+                <span>NCR Lists</span>
+                <button class="action-btn create-btn" onclick="location.href='create.html'">+ Create</button>
+            </div>
+
+            <div class="filter">
+                <label for="statusFilter">Filter by Status:</label>
+                <select id="statusFilter">
+                    <option value="all">All</option>
+                    <option value="Active">Active</option>
+                    <option value="Closed">Closed</option>
+                </select>
+              
+                <label for="sortOption">Sort by:</label>
+                <select id="sortOption">
+                    <option value="date">Date</option>
+                    <option value="name">Name</option>
+                </select>
+            </div>              
+    
+            <div class="list-container" id="listContainer">        
+                <div class="list-item headers">
+                    <span class="list-id">Report ID</span>
+                    <span class="list-name">Created By</span>
+                    <span class="list-time">Time Created</span>
+                    <span class="list-status">Status</span>
+                    <span class="list-actions">Actions</span>
+                </div>
+            </div>
+
+        </section>
+        <script src="details.js"></script>
     </main>
+
+    <footer>
+        <div class="footer-div">
+            <div class="footer-col">
+                <p>Copyright &copy; Crossfire NCR Form | Rice Programmers</p>
+            </div>
+            <div class="footer-col">
+                <p>Mail: crossfire@gmail.com</p>
+                <p>Phone: +1 &#40;905&#41; 456-7890</p>
+            </div>
+        </div>
+    </footer>
 </body>
-
-<footer>
-    <div class="footer-div">
-        <div class="footer-col">
-            <p>Copyright &copy; Crossfire NCR Form | Rice Programmers</p>
-        </div>
-        <div class="footer-col">
-            <p>Mail: riceprogrammers@gmail.com</p>
-            <p>Phone: +1 &#40;905&#41; 456-7890</p>
-        </div>
-    </div>
-</footer>
-
 </html>
