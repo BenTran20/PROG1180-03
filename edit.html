@@ -40,25 +40,39 @@
                     <label>Order ID: <span class="required-asterisk">*</span>
                         <input id="orderId" type="text" placeholder="eg. OR12345678" />
                     </label>
+                    <span style="color: red;" id="productError"></span>
+                    <span style="color: red;" id="orderError"></span>
                 </fieldset>
 
-                                <fieldset >
+                <fieldset >
                     <legend>Supplier</legend>
                     <div class="three-cols">
                         <label>Identify Process Applicable: <span class="required-asterisk">*</span></label>
                         <label><input type="checkbox" name="process" value="Supplier or Rec-Insp"/> Supplier or Rec-Insp </label>
                         <label><input type="checkbox" name="process" value="WIP (Production Order)"/> WIP (Production Order)</label>    
+                        <span style="color: red;" id="processError"></span>    
                     </div>
                     <div class="form-group-2">
                         <label>Supplier Name: <span class="required-asterisk">*</span>
                             <input id="supplier" type="text" placeholder="Enter name" />
+                            <span></span><span></span>
+                            <span style="color: red;" id="supplierError"></span>
+
                         </label>
                         <label>Description Of Item: <span class="required-asterisk">*</span>
                             <input id="desItem" type="text" placeholder="Enter description of item"  />
+                            <span></span><span></span>
+                            <span style="color: red;" id="desItemError"></span>
+
                         </label>
+
                         <label>Description of Defect: <span class="required-asterisk">*</span>
                             <textarea id="desDefect" class="textarea" placeholder="Enter Description" rows="2" ></textarea>
+                            <span></span><span></span>
+                            <span style="color: red;" id="desDefectError"></span>
+
                         </label>
+
                     </div>
                 </fieldset>
 
@@ -71,11 +85,13 @@
                         <label>Quantity Defect: <span class="required-asterisk">*</span>
                             <input id="quaDefect" type="number" />
                         </label>
+                        <span style="color: red;" id="quaReceivedError"></span>
+                        <span style="color: red;" id="quaDefectError"></span>
                     </div>
                     <div class="three-cols">
                         <label>Item Non-Conforming: <span class="required-asterisk">*</span></label> 
                         <label><input type="radio" name="nonConforming" value="Yes"  /> YES</label>
-                        <label><input type="radio" name="nonConforming" value="No"  /> NO</label>    
+                        <label><input type="radio" name="nonConforming" value="No"  /> NO</label> 
                     </div>
                 </fieldset>
 
@@ -84,14 +100,18 @@
                     <label>Name: <span class="required-asterisk">*</span>
                         <input type="text" id="repName" name="repName" placeholder="Enter representative name" />
                     </label>
+
                     <label>Date: <span class="required-asterisk">*</span>
                         <input type="date" id="repDate" name="repDate"  />
                     </label>
+                    <span style="color: red;" id="repNameError"></span>
+                    <span style="color: red;" id="repDateError"></span>
                 </fieldset>
+                
                 
                 <div class="form-btn">
                     <button type="submit" class="save-btn">SAVE</button>
-                    <button type="button" class="cancel-btn" onclick="location.href='homepage.html'">CANCEL</button>
+                    <button type="button" class="cancel-btn" onclick="confirmCancel()">CANCEL</button>
                 </div>            
             </div>
             <br/>
