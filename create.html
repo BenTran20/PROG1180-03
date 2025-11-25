@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Create</title>
-        <script src="menu.js"></script>
     </head>
   
     <body>
@@ -47,6 +46,7 @@
             <div class="form-container">
                 <fieldset class="form-group two-cols">
                     <legend>Product Information</legend>
+                    <i>Please fill in these 2 required fields to Save Draft.</i><i></i>
                     <label>Product ID: <span class="required-asterisk">*</span>
                         <input id="productId" type="text" placeholder="eg. PR12345678" />
                     </label>
@@ -73,7 +73,7 @@
 
                         </label>
                         <label>Description Of Item: <span class="required-asterisk">*</span>
-                            <input id="desItem" type="text" placeholder="Enter description of item"  />
+                            <textarea id="desItem" type="text" placeholder="Enter description of item"  ></textarea>
                             <span></span><span></span>
                             <span style="color: red;" id="desItemError"></span>
 
@@ -121,9 +121,11 @@
                     <span style="color: red;" id="repNameError"></span>
                     <span style="color: red;" id="repDateError"></span>
                 </fieldset>
+                <span class="hint"><span class="required-asterisk">*</span> is required only when completing the form</span>
                 
                 <div class="form-btn">
-                    <button type="button" class="save-btn" onclick="SaveWithDataValid()">SAVE</button>
+                    <button type="button" class="draft-btn" onclick="saveDraft()">SAVE DRAFT</button>
+                    <button type="button" class="save-btn" onclick="SaveWithDataValid()">COMPLETE</button>
                     <button type="button" class="cancel-btn" onclick="confirmCancel()">CANCEL</button>
                 </div>            
             </div>
